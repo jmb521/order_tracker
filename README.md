@@ -23,8 +23,8 @@ Things you may want to cover:
 
 * ...
  customer
- =>name
- =>phone
+ =>name - done
+ =>phone - done
 
 
 item
@@ -37,5 +37,5 @@ item
 order
 =>status
 =>order_date
-=>
+
 =>customer_id
