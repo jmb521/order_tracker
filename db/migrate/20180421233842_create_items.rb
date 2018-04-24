@@ -5,6 +5,7 @@ class CreateItems < ActiveRecord::Migration[5.1]
       t.string :ordered_from
       t.string :size
       t.string :description
+
       t.timestamps
     end
   end
