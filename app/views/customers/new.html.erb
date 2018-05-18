@@ -1,0 +1,11 @@
+<%= form_tag('/customer', method: 'post') do %>
+<%= label_tag :name %>
+<br />
+<%= text_field_tag :name %>
+<br />
+<%= label_tag :phone %>
+<br />
+<%= text_field_tag :phone %>
+<br />
+<%= submit_tag "Submit" %>
+<% end %>
