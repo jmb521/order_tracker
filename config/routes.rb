@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/', to: 'application#home'
   resources :orders
   resources :items
   resources :customers
