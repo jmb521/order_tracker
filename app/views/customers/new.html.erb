@@ -1,11 +1,12 @@
-<%= form_tag('/customer', method: 'post') do %>
-<%= label_tag :name %>
+<%= form_for(@customer) do |f| %>
+
+<%= f.label :name %>
 <br />
-<%= text_field_tag :name %>
+<%= f.text_field :name %>
 <br />
-<%= label_tag :phone %>
+<%= f.label :phone %>
 <br />
-<%= text_field_tag :phone %>
+<%= f.text_field :phone %>
 <br />
-<%= submit_tag "Submit" %>
+<%= f.submit "Submit" %>
 <% end %>
