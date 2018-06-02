@@ -5,11 +5,11 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @order = Order.find(order_params)
+    @order = Order.find(params[:id])
   end
 
   def create
-
+    @order = Order.create(order_params)
   end
 
   def new
