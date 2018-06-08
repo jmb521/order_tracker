@@ -1,0 +1,10 @@
+<h1> Customer Details</h1>
+<br />
+<br />
+<br />
+<p>Name: <%=@customer.name%></p>
+<br />
+<p>Phone: <%=@customer.phone%></p>
+
+<%=link_to "Edit", edit_customer_path(@customer) %>
+<%= link_to "Delete", @customer, :method => :delete %>

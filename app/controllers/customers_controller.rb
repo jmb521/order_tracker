@@ -32,9 +32,12 @@ class CustomersController < ApplicationController
     else
       redirect_to edit_customer_path(@customer)
     end
+  end
 
-
-
+  def destroy
+    @customer = Customer.find(params[:id])
+    @customer.destroy
+    redirect_to customers_path
   end
 
 
