@@ -1,3 +1,4 @@
 <% @customers.each do |c| %>
-  <%= c.name %>
+  <%=link_to "#{c.name}", customer_path(c) %>
+  <br />
 <% end %>
