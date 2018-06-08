@@ -23,6 +23,20 @@ class CustomersController < ApplicationController
     @customer = Customer.find(params[:id])
   end
 
+  def update
+    @customer = Customer.find(params[:id])
+    @customer.update(customer_params)
+    if @customer.save
+      @customer.save
+      redirect_to customer_path(@customer)
+    else
+      redirect_to edit_customer_path(@customer)
+    end
+
+
+
+  end
+
 
   private
 
