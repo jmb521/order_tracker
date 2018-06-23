@@ -1,0 +1,21 @@
+<div class="centered">
+  <h1>Order Status</h1>
+  <br />
+  <br />
+  <br />
+
+  <h4>Customer Name: <%= @order.customer.name %></h4>
+  <h4>Customer phone: <%= @order.customer.phone %></h4>
+
+  <h4>Order Date: <%= @order.created_at %></h4>
+  <% if @order.items.length == 0 %>
+    <p>There are no items in this order </p>
+  <% else %>
+    <% @order.items.each_with_index do |item, index| %>
+      <p><%= index+1 %>. <%= item.name%>  <%=item.ordered_from%></p>
+    <% end %>
+  <% end %>
+  <br />
+
+
+</div>
