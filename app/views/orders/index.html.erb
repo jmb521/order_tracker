@@ -1,3 +1,4 @@
+
 <% @orders.each do |o| %>
-  <%= o.status %>
+  <%=link_to o.customer.name, order_path(o.id) %>
 <% end %>
