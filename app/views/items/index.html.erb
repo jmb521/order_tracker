@@ -1,4 +1,10 @@
 <% @items.each do |item| %>
-  <p><% item.name %></p>
+  <p><%= item.name %></p>
+  <p><%= item.size %></p>
+  <p><%= item.description %></p>
+  <br />
+  <%= link_to "Edit", edit_item_path(item) %>
+  <%= link_to "Delete", @item, :method => :delete %>
+  <hr />
 
   <% end %>
