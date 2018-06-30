@@ -8,18 +8,22 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.create(order_params)
+    @item = Item.create(item_params)
   end
 
   def new
-    
+    @item = Item.new
 
   end
 
   def edit
-    @item = Item.find(order_params)
+    @item = Item.find(params[:id])
   end
-
+  def update
+    @item = Item.find(params[:id])
+    @item.update(item_params)
+    redirect_to item_path(@item)
+  end
   def destroy
     if @item
       @item.destroy
@@ -28,7 +32,7 @@ class ItemsController < ApplicationController
 
   private
 
-  def order_params
-    params.require(:orders).permit(:status, :customer_id)
+  def item_params
+    params.require(:item).permit(:name, :ordered_from, :size, :description)
   end
 end
